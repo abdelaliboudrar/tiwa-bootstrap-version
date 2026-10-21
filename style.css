@@ -1,0 +1,716 @@
+
+/* =========================================
+   TIWA™ BRAND SYSTEM
+   Bootstrap 5.3 + Custom CSS
+========================================= */
+
+:root {
+    --tiwa-blue: #355af1;
+    --tiwa-blue-dark: #2445d4;
+    --tiwa-navy: #091540;
+    --tiwa-black: #111111;
+    --tiwa-white: #ffffff;
+    --tiwa-muted: rgba(255, 255, 255, 0.75);
+    --tiwa-radius: 32px;
+    --tiwa-transition: 0.3s ease;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--tiwa-blue);
+    color: var(--tiwa-white);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+a {
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+}
+
+::selection {
+    background: var(--tiwa-white);
+    color: var(--tiwa-blue);
+}
+
+/* =========================================
+   NAVIGATION
+========================================= */
+
+.site-header {
+    position: sticky;
+    top: 12px;
+    z-index: 1030;
+    padding: 12px 0 0;
+}
+
+.tiwa-navbar {
+    width: 92%;
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 12px 24px;
+    border-radius: 50px;
+    background: rgba(255, 255, 255, 0.94);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+    backdrop-filter: blur(15px);
+}
+
+.tiwa-logo {
+    color: var(--tiwa-black);
+    font-size: 24px;
+    font-weight: 800;
+    letter-spacing: -1.5px;
+}
+
+.tiwa-logo:hover {
+    color: var(--tiwa-blue);
+}
+
+.tiwa-logo span {
+    font-size: 12px;
+    vertical-align: top;
+}
+
+.tiwa-navbar .nav-link {
+    padding: 10px 15px !important;
+    border-radius: 30px;
+    color: #333;
+    font-size: 13px;
+    font-weight: 600;
+    transition: var(--tiwa-transition);
+}
+
+.tiwa-navbar .nav-link:hover,
+.tiwa-navbar .nav-link.active {
+    background: var(--tiwa-black);
+    color: var(--tiwa-white);
+}
+
+.tiwa-navbar .navbar-toggler {
+    border: none;
+    box-shadow: none;
+    padding: 8px;
+}
+
+/* =========================================
+   SHARED TYPOGRAPHY
+========================================= */
+
+.eyebrow {
+    margin-bottom: 24px;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.hero-section h1,
+.branding-copy h2,
+.section-heading h2,
+.cta-card h2 {
+    font-weight: 800;
+    letter-spacing: -0.065em;
+    line-height: 0.98;
+}
+
+.text-link {
+    display: inline-block;
+    width: fit-content;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 700;
+    transition: var(--tiwa-transition);
+}
+
+.text-link:hover {
+    opacity: 0.7;
+    transform: translateX(4px);
+}
+
+/* =========================================
+   HERO
+========================================= */
+
+.hero-section {
+    min-height: 86vh;
+    display: flex;
+    align-items: center;
+    padding: 100px 0 50px;
+}
+
+.hero-content {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.hero-section h1 {
+    margin: 0 0 30px;
+    font-size: clamp(48px, 8.5vw, 108px);
+}
+
+.hero-section h1 span {
+    color: rgba(255, 255, 255, 0.64);
+}
+
+.hero-description {
+    max-width: 620px;
+    margin: 0 auto 32px;
+    color: var(--tiwa-muted);
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+}
+
+.btn-tiwa {
+    padding: 15px 24px;
+    border: 1px solid var(--tiwa-black);
+    border-radius: 50px;
+    background: var(--tiwa-black);
+    color: var(--tiwa-white);
+    font-size: 14px;
+    font-weight: 700;
+    transition: var(--tiwa-transition);
+}
+
+.btn-tiwa:hover {
+    background: var(--tiwa-white);
+    border-color: var(--tiwa-white);
+    color: var(--tiwa-black);
+    transform: translateY(-3px);
+}
+
+.btn-tiwa span {
+    margin-left: 12px;
+}
+
+.hero-bottom {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-top: 100px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    color: var(--tiwa-muted);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+/* =========================================
+   BRANDING SECTION
+========================================= */
+
+.branding-section {
+    padding: 120px 0;
+}
+
+.branding-copy {
+    max-width: 520px;
+}
+
+.branding-copy h2 {
+    margin-bottom: 30px;
+    font-size: clamp(42px, 5.5vw, 72px);
+}
+
+.branding-copy h2 span {
+    display: block;
+    color: rgba(255, 255, 255, 0.65);
+}
+
+.branding-copy p:not(.eyebrow) {
+    max-width: 480px;
+    margin-bottom: 20px;
+    color: var(--tiwa-muted);
+    font-size: 16px;
+}
+
+.btn-outline-tiwa {
+    margin-top: 14px;
+    padding: 13px 20px;
+    border: 1px solid rgba(255, 255, 255, 0.65);
+    border-radius: 50px;
+    color: var(--tiwa-white);
+    font-size: 13px;
+    font-weight: 700;
+    transition: var(--tiwa-transition);
+}
+
+.btn-outline-tiwa:hover {
+    background: var(--tiwa-white);
+    color: var(--tiwa-blue);
+}
+
+.branding-image {
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--tiwa-radius);
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.15);
+}
+
+.branding-image img {
+    display: block;
+    width: 100%;
+    height: 520px;
+    object-fit: cover;
+    transition: transform 0.7s ease;
+}
+
+.branding-image:hover img {
+    transform: scale(1.04);
+}
+
+.image-caption {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    padding: 10px 14px;
+    border-radius: 50px;
+    background: rgba(9, 21, 64, 0.85);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+/* =========================================
+   SELECTED WORK
+========================================= */
+
+.work-section {
+    padding: 100px 0 120px;
+    background: rgba(9, 21, 64, 0.09);
+}
+
+.section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    gap: 30px;
+    margin-bottom: 45px;
+}
+
+.section-heading .eyebrow {
+    margin-bottom: 16px;
+}
+
+.section-heading h2 {
+    margin: 0;
+    font-size: clamp(38px, 5vw, 64px);
+}
+
+.section-heading > .text-link {
+    margin-bottom: 8px;
+}
+
+.project-card {
+    display: block;
+    color: var(--tiwa-white);
+    text-decoration: none;
+}
+
+.project-visual {
+    position: relative;
+    min-height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 24px;
+    transition: transform 0.35s ease;
+}
+
+.project-card:hover .project-visual {
+    transform: translateY(-5px);
+}
+
+.project-visual > span {
+    position: absolute;
+    top: 20px;
+    left: 22px;
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+
+.project-visual strong {
+    font-size: clamp(40px, 5vw, 72px);
+    font-weight: 800;
+    letter-spacing: -5px;
+    transition: transform 0.4s ease;
+}
+
+.project-card:hover .project-visual strong {
+    transform: scale(1.07);
+}
+
+.project-one {
+    background: #101b38;
+}
+
+.project-one strong {
+    font-size: 120px;
+    font-family: Georgia, serif;
+}
+
+.project-two {
+    background: #e7dfcf;
+    color: #181818;
+}
+
+.project-three {
+    background: #b6c6ff;
+    color: #182a76;
+}
+
+.project-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 2px;
+}
+
+.project-info h3 {
+    margin: 0 0 5px;
+    font-size: 19px;
+    font-weight: 700;
+}
+
+.project-info p {
+    margin: 0;
+    color: var(--tiwa-muted);
+    font-size: 12px;
+}
+
+.project-arrow {
+    font-size: 24px;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover .project-arrow {
+    transform: translate(3px, -3px);
+}
+
+.portfolio-note {
+    margin-top: 25px;
+    color: var(--tiwa-muted);
+    font-size: 12px;
+}
+
+/* =========================================
+   QUOTE
+========================================= */
+
+.quote-section {
+    padding: 100px 0;
+}
+
+.quote-card {
+    padding: clamp(50px, 9vw, 110px) 10%;
+    border-radius: 40px;
+    background: var(--tiwa-navy);
+    text-align: center;
+}
+
+.quote-card .eyebrow {
+    color: rgba(255, 255, 255, 0.65);
+}
+
+.quote-card blockquote {
+    max-width: 950px;
+    margin: 0 auto;
+    font-size: clamp(30px, 5vw, 62px);
+    font-weight: 700;
+    letter-spacing: -0.05em;
+    line-height: 1.12;
+}
+
+.quote-author {
+    margin: 30px 0 0;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+/* =========================================
+   CALL TO ACTION
+========================================= */
+
+.cta-section {
+    padding: 30px 0 110px;
+}
+
+.cta-card {
+    padding: clamp(50px, 8vw, 90px) 20px;
+    border-radius: 40px;
+    background: var(--tiwa-white);
+    color: var(--tiwa-black);
+    text-align: center;
+}
+
+.cta-card .eyebrow {
+    color: #555;
+}
+
+.cta-card h2 {
+    margin-bottom: 35px;
+    font-size: clamp(38px, 6vw, 72px);
+}
+
+.btn-light-tiwa {
+    padding: 15px 24px;
+    border-radius: 50px;
+    background: var(--tiwa-black);
+    color: var(--tiwa-white);
+    font-size: 14px;
+    font-weight: 700;
+    transition: var(--tiwa-transition);
+}
+
+.btn-light-tiwa:hover {
+    background: var(--tiwa-blue);
+    color: var(--tiwa-white);
+    transform: translateY(-3px);
+}
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.site-footer {
+    padding: 80px 0 25px;
+    background: var(--tiwa-navy);
+}
+
+.footer-logo {
+    display: inline-block;
+    margin-bottom: 15px;
+    color: var(--tiwa-white);
+    font-size: 38px;
+    font-weight: 800;
+    letter-spacing: -2px;
+    text-decoration: none;
+}
+
+.footer-logo:hover {
+    color: #aabaff;
+}
+
+.footer-description {
+    color: var(--tiwa-muted);
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.footer-heading {
+    margin-bottom: 20px;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.footer-links a,
+.footer-links span {
+    color: var(--tiwa-muted);
+    font-size: 13px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: var(--tiwa-white);
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-top: 65px;
+    padding-top: 25px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.footer-bottom p {
+    margin: 0;
+    color: var(--tiwa-muted);
+    font-size: 11px;
+}
+
+/* =========================================
+   TABLETS
+========================================= */
+
+@media (max-width: 991.98px) {
+    .tiwa-navbar {
+        padding: 12px 20px;
+        border-radius: 28px;
+    }
+
+    .tiwa-navbar .navbar-collapse {
+        padding-top: 15px;
+    }
+
+    .tiwa-navbar .nav-link {
+        padding: 12px 14px !important;
+    }
+
+    .hero-section {
+        min-height: 75vh;
+        padding-top: 90px;
+    }
+
+    .branding-section {
+        padding: 90px 0;
+    }
+
+    .branding-image img {
+        height: 430px;
+    }
+
+    .project-visual {
+        min-height: 250px;
+    }
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 575.98px) {
+    .tiwa-navbar {
+        width: 94%;
+        padding: 10px 15px;
+    }
+
+    .tiwa-logo {
+        font-size: 21px;
+    }
+
+    .hero-section {
+        min-height: auto;
+        padding: 100px 0 55px;
+    }
+
+    .hero-section h1 {
+        font-size: clamp(42px, 11vw, 60px);
+        letter-spacing: -0.06em;
+    }
+
+    .hero-description {
+        font-size: 15px;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .hero-bottom {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 65px;
+        text-align: center;
+        font-size: 9px;
+    }
+
+    .branding-section {
+        padding: 65px 0;
+    }
+
+    .branding-copy h2 {
+        font-size: 45px;
+    }
+
+    .branding-image img {
+        height: 340px;
+    }
+
+    .work-section {
+        padding: 70px 0;
+    }
+
+    .section-heading {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .section-heading h2 {
+        font-size: 42px;
+    }
+
+    .project-visual {
+        min-height: 260px;
+    }
+
+    .quote-section {
+        padding: 65px 0;
+    }
+
+    .quote-card {
+        padding: 55px 25px;
+        border-radius: 25px;
+    }
+
+    .quote-card blockquote {
+        font-size: 32px;
+    }
+
+    .cta-section {
+        padding-bottom: 70px;
+    }
+
+    .cta-card {
+        border-radius: 25px;
+    }
+
+    .site-footer {
+        padding-top: 60px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 45px;
+    }
+}
+
+/* =========================================
+   ACCESSIBILITY
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+    }
+}
